@@ -1,0 +1,20 @@
+<h2> Sign up for Creddit (Crappy Reddit) </h2>
+
+<% @user.errors.full_messages.each do |e| %>
+<%= e %>
+<br>
+<% end%>
+<br>
+<br>
+<%= form_for(@user) do |f| %>
+<%= f.text_field :name %>
+<%= f.label :name %>
+<br>
+<%= f.password_field :password %>
+<%= f.label :password %>
+<br>
+<%= f.password_field :password_confirmation%>
+<%= f.label :password_confirmation %>
+<br>
+<%=f.submit "GIMME"%>
+<% end %>
